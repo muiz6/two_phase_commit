@@ -1,0 +1,19 @@
+{
+  "name": "coordinator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "license": "MIT",
+  "engines": {
+    "node": "14.21.1"
+  },
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "",
+  "dependencies": {
+    "axios": "^1.2.1",
+    "express": "^4.18.2",
+    "uuid": "^9.0.0"
+  }
+}

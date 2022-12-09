@@ -1,0 +1,48 @@
+version: '3.9'
+services:
+  node1:
+    build: ./node
+    command: npm start
+    environment:
+      - READY=1
+
+  node2:
+    build: ./node
+    command: npm start
+    environment:
+      - READY=1
+
+  node3:
+    build: ./node
+    command: npm start
+    environment:
+      - READY=1
+
+  node4:
+    build: ./node
+    command: npm start
+    environment:
+      - READY=1
+
+  node5:
+    build: ./node
+    command: npm start
+    environment:
+      - READY=1
+
+  coordinator:
+    build: ./coordinator
+    depends_on:
+      - node1
+      - node2
+      - node3
+      - node4
+      - node5
+    environment:
+      - NODE_1=node1:4000
+      - NODE_2=node2:4000
+      - NODE_3=node3:4000
+      - NODE_4=node4:4000
+      - NODE_5=node5:4000
+      - T=34
+    command: npm start
